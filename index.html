@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head> 
+    <title> BTC Allocation Optimizer</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="PopupStyles.css">
+    <link rel="stylesheet" href="ResultsStyles.css">
+    <script type = "text/javascript" src="Main.js"></script>
+</head>
+<body>
+    <div class="left-side"></div>
+    <div class="right-side"></div>
+    <div class="picture">
+        <img src = "bitcoinPic.png">
+    </div>
+    <div class = "btc-modal" id ="btc-modal">
+        <h1> CALCULATE OPTIMAL BITCOIN ALLOCATION </h1>
+        <div class = "flex">
+            <span class = "currency" id = "currency" style="display:none">$</span>
+            <input type = "hidden" id = "input" name = "btc-input" display = 'none' placeholder="1000"></input>
+        </div>
+        <div>
+            <button type = "button" id = "button" onclick = startquestions()> Click to Start! </button>
+        </div>
+    </div>
+    <div class = "popup" id = "popup">
+        <h1 id = "popH1"> Scenario 1 </h1>
+        <h2> Scenario Price </h2>
+        <div class = "flexin">
+            <span class = "currency" id = "currency">$</span>
+            <input id = "spriceinput"></input>
+        </div>
+        <h3> Scenario Probability </h3>
+        <div class = "flexprob">
+            <input id = "sprobinput"></input>
+            <span class = "currency" id = "currency">%</span>
+        </div>
+        <div>
+            <button type = "button" id = "sButton" onclick= scenarioLoop()>Next</button>
+        </div>
+    </div>
+    <div class = "results" id = "results">
+        <h1 id = "resultsH1"></h1>
+        <div class = "container" id = "container" style = "width: 300px; height: 300px;"></div>
+        <h2 id = "resultsH2"></h2>
+        <button type = "button" id = "restartButton" onclick= restart()> Click to Restart! </button>
+    </div>
+</body>
+</html>
